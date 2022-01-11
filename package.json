@@ -2,7 +2,15 @@
   "name": "@japa/synthetic-events",
   "version": "0.0.0",
   "description": "Generate dummy/synthetic events to test a reporter",
-  "main": "index.js",
+  "main": "build/index.js",
+  "files": [
+    "build/src",
+    "build/index.d.ts",
+    "build/index.js"
+  ],
+  "exports": {
+    ".": "./build/index.js"
+  },
   "scripts": {
     "mrm": "mrm --preset=@adonisjs/mrm-preset",
     "pretest": "npm run lint",
@@ -59,11 +67,6 @@
     ],
     "runGhActionsOnWindows": false
   },
-  "files": [
-    "build/src",
-    "build/index.d.ts",
-    "build/index.js"
-  ],
   "eslintConfig": {
     "extends": [
       "plugin:adonis/typescriptPackage",
@@ -102,5 +105,21 @@
   "np": {
     "contents": ".",
     "anyBranch": false
-  }
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
+  "types": "./build/index.d.ts",
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/japa/synthetic-events.git"
+  },
+  "bugs": {
+    "url": "https://github.com/japa/synthetic-events/issues"
+  },
+  "homepage": "https://github.com/japa/synthetic-events#readme"
 }
