@@ -7,7 +7,15 @@
  * file that was distributed with this source code.
  */
 
+import { Assert } from '@japa/assert'
 import { TestEndNode, TestStartNode } from '@japa/core'
+
+let assertionError
+try {
+  new Assert().deepEqual({ id: 1 }, { id: 2 })
+} catch (error) {
+  assertionError = error
+}
 
 const test1: [TestStartNode, TestEndNode] = [
   {
@@ -310,7 +318,7 @@ const test12: [TestStartNode, TestEndNode] = [
     errors: [
       {
         phase: 'test',
-        error: new Error('Test failed'),
+        error: assertionError,
       },
       {
         phase: 'setup:cleanup',

@@ -121,5 +121,8 @@
   "bugs": {
     "url": "https://github.com/japa/synthetic-events/issues"
   },
-  "homepage": "https://github.com/japa/synthetic-events#readme"
+  "homepage": "https://github.com/japa/synthetic-events#readme",
+  "dependencies": {
+    "@japa/assert": "^1.0.1"
+  }
 }
