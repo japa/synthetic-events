@@ -77,25 +77,25 @@ const test3: [TestStartNode, TestEndNode] = [
 
 const test4: [TestStartNode, TestEndNode] = [
   {
-    title: 'define test retries',
+    title: 'ping 3rd party service',
     tags: [],
     timeout: 0,
     isSkipped: false,
     isFailing: true,
-    failReason: 'Retries are not working',
+    failReason: 'Endpoint is incorrect',
     isTodo: false,
   },
   {
-    title: 'define test retries',
+    title: 'ping 3rd party service',
     tags: [],
     timeout: 0,
     isSkipped: false,
     isFailing: true,
-    failReason: 'Retries are not working',
+    failReason: 'Endpoint is incorrect',
     isTodo: false,
     duration: 200,
-    errors: [],
-    hasError: false,
+    errors: [{ phase: 'test', error: new Error('Unable to reach server') }],
+    hasError: true,
   },
 ]
 
@@ -325,6 +325,30 @@ const test12: [TestStartNode, TestEndNode] = [
   },
 ]
 
+const test13: [TestStartNode, TestEndNode] = [
+  {
+    title: 'regression test passing',
+    tags: [],
+    timeout: 0,
+    isSkipped: false,
+    isFailing: true,
+    failReason: 'Retries are not working',
+    isTodo: false,
+  },
+  {
+    title: 'regression test passing',
+    tags: [],
+    timeout: 0,
+    isSkipped: false,
+    isFailing: true,
+    failReason: 'Retries are not working',
+    isTodo: false,
+    duration: 200,
+    errors: [],
+    hasError: false,
+  },
+]
+
 export default [
   test1,
   test2,
@@ -338,4 +362,5 @@ export default [
   test10,
   test11,
   test12,
+  test13,
 ]
