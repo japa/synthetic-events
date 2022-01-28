@@ -177,7 +177,7 @@ const test7: [TestStartNode, TestEndNode] = [
 
 const test8: [TestStartNode, TestEndNode] = [
   {
-    title: 'define dataset for the test',
+    title: 'define dataset for the test "{{ dataset.row.name }}"',
     tags: [],
     dataset: {
       size: 3,
@@ -190,7 +190,7 @@ const test8: [TestStartNode, TestEndNode] = [
     isTodo: false,
   },
   {
-    title: 'define dataset for the test',
+    title: 'define dataset for the test "{{ dataset.row.name }}"',
     tags: [],
     dataset: {
       size: 3,
@@ -209,11 +209,11 @@ const test8: [TestStartNode, TestEndNode] = [
 
 const test9: [TestStartNode, TestEndNode] = [
   {
-    title: 'define dataset for the test',
+    title: 'define dataset for the test "{{ dataset.row.name }}"',
     tags: [],
     dataset: {
       size: 3,
-      row: { id: 2, name: 'virk' },
+      row: { id: 2, name: 'nikk' },
       index: 1,
     },
     timeout: 0,
@@ -222,11 +222,11 @@ const test9: [TestStartNode, TestEndNode] = [
     isTodo: false,
   },
   {
-    title: 'define dataset for the test',
+    title: 'define dataset for the test "{{ dataset.row.name }}"',
     tags: [],
     dataset: {
       size: 3,
-      row: { id: 2, name: 'virk' },
+      row: { id: 2, name: 'nikk' },
       index: 1,
     },
     timeout: 0,
@@ -241,11 +241,11 @@ const test9: [TestStartNode, TestEndNode] = [
 
 const test10: [TestStartNode, TestEndNode] = [
   {
-    title: 'define dataset for the test',
+    title: 'define dataset for the test "{{ dataset.row.name }}"',
     tags: [],
     dataset: {
       size: 3,
-      row: { id: 3, name: 'virk' },
+      row: { id: 3, name: 'romain' },
       index: 2,
     },
     timeout: 0,
@@ -254,11 +254,11 @@ const test10: [TestStartNode, TestEndNode] = [
     isTodo: false,
   },
   {
-    title: 'define dataset for the test',
+    title: 'define dataset for the test "{{ dataset.row.name }}"',
     tags: [],
     dataset: {
       size: 3,
-      row: { id: 3, name: 'virk' },
+      row: { id: 3, name: 'romain' },
       index: 2,
     },
     timeout: 0,
