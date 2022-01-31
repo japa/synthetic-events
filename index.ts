@@ -27,6 +27,7 @@ export async function fire(emitter: Emitter) {
         await emitter.emit('test:end', testEvent[1])
       }
 
+      await emitter.emit('uncaught:exception', new Error('Something failed outside of test'))
       await emitter.emit('group:end', groupEvent[1])
     }
 
