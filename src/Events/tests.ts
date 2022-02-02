@@ -25,6 +25,7 @@ const test1: [TestStartNode, TestEndNode] = [
     isSkipped: false,
     isFailing: false,
     isTodo: false,
+    meta: {},
   },
   {
     title: 'create an instance of test',
@@ -36,6 +37,7 @@ const test1: [TestStartNode, TestEndNode] = [
     duration: 20,
     errors: [],
     hasError: false,
+    meta: {},
   },
 ]
 
@@ -47,6 +49,7 @@ const test2: [TestStartNode, TestEndNode] = [
     isSkipped: false,
     isFailing: false,
     isTodo: false,
+    meta: {},
   },
   {
     title: 'define timeout for the test',
@@ -58,6 +61,7 @@ const test2: [TestStartNode, TestEndNode] = [
     duration: 18,
     errors: [],
     hasError: false,
+    meta: {},
   },
 ]
 
@@ -69,6 +73,7 @@ const test3: [TestStartNode, TestEndNode] = [
     isSkipped: false,
     isFailing: false,
     isTodo: false,
+    meta: {},
   },
   {
     title: 'disable timeout for the test',
@@ -80,6 +85,7 @@ const test3: [TestStartNode, TestEndNode] = [
     duration: 3000,
     errors: [],
     hasError: false,
+    meta: {},
   },
 ]
 
@@ -92,6 +98,7 @@ const test4: [TestStartNode, TestEndNode] = [
     isFailing: true,
     failReason: 'Endpoint is incorrect',
     isTodo: false,
+    meta: {},
   },
   {
     title: 'ping 3rd party service',
@@ -104,6 +111,7 @@ const test4: [TestStartNode, TestEndNode] = [
     duration: 200,
     errors: [{ phase: 'test', error: new Error('Unable to reach server') }],
     hasError: true,
+    meta: {},
   },
 ]
 
@@ -116,6 +124,7 @@ const test5: [TestStartNode, TestEndNode] = [
     skipReason: 'Skipping in CI',
     isFailing: false,
     isTodo: false,
+    meta: {},
   },
   {
     title: 'mark test to be skipped',
@@ -128,6 +137,7 @@ const test5: [TestStartNode, TestEndNode] = [
     duration: 0,
     errors: [],
     hasError: false,
+    meta: {},
   },
 ]
 
@@ -139,6 +149,7 @@ const test6: [TestStartNode, TestEndNode] = [
     isSkipped: false,
     isFailing: false,
     isTodo: true,
+    meta: {},
   },
   {
     title: 'mark test as todo',
@@ -150,6 +161,7 @@ const test6: [TestStartNode, TestEndNode] = [
     duration: 1,
     errors: [],
     hasError: false,
+    meta: {},
   },
 ]
 
@@ -161,6 +173,7 @@ const test7: [TestStartNode, TestEndNode] = [
     isSkipped: false,
     isFailing: false,
     isTodo: false,
+    meta: {},
   },
   {
     title: 'define tags',
@@ -172,6 +185,7 @@ const test7: [TestStartNode, TestEndNode] = [
     duration: 1,
     errors: [],
     hasError: false,
+    meta: {},
   },
 ]
 
@@ -188,6 +202,7 @@ const test8: [TestStartNode, TestEndNode] = [
     isSkipped: false,
     isFailing: false,
     isTodo: false,
+    meta: {},
   },
   {
     title: 'define dataset for the test "{{ dataset.row.name }}"',
@@ -204,6 +219,7 @@ const test8: [TestStartNode, TestEndNode] = [
     duration: 300,
     errors: [],
     hasError: false,
+    meta: {},
   },
 ]
 
@@ -220,6 +236,7 @@ const test9: [TestStartNode, TestEndNode] = [
     isSkipped: false,
     isFailing: false,
     isTodo: false,
+    meta: {},
   },
   {
     title: 'define dataset for the test "{{ dataset.row.name }}"',
@@ -236,6 +253,7 @@ const test9: [TestStartNode, TestEndNode] = [
     duration: 300,
     errors: [],
     hasError: false,
+    meta: {},
   },
 ]
 
@@ -252,6 +270,7 @@ const test10: [TestStartNode, TestEndNode] = [
     isSkipped: false,
     isFailing: false,
     isTodo: false,
+    meta: {},
   },
   {
     title: 'define dataset for the test "{{ dataset.row.name }}"',
@@ -268,6 +287,7 @@ const test10: [TestStartNode, TestEndNode] = [
     duration: 300,
     errors: [],
     hasError: false,
+    meta: {},
   },
 ]
 
@@ -279,6 +299,7 @@ const test11: [TestStartNode, TestEndNode] = [
     isSkipped: false,
     isFailing: false,
     isTodo: false,
+    meta: {},
   },
   {
     title: 'multiple calls to exec should result in a noop',
@@ -295,6 +316,7 @@ const test11: [TestStartNode, TestEndNode] = [
       },
     ],
     hasError: true,
+    meta: {},
   },
 ]
 
@@ -306,6 +328,7 @@ const test12: [TestStartNode, TestEndNode] = [
     isSkipped: false,
     isFailing: false,
     isTodo: false,
+    meta: {},
   },
   {
     title: 'fail test when executor raises an exception',
@@ -330,6 +353,7 @@ const test12: [TestStartNode, TestEndNode] = [
       },
     ],
     hasError: true,
+    meta: {},
   },
 ]
 
@@ -342,6 +366,7 @@ const test13: [TestStartNode, TestEndNode] = [
     isFailing: true,
     failReason: 'Retries are not working',
     isTodo: false,
+    meta: {},
   },
   {
     title: 'regression test passing',
@@ -354,6 +379,7 @@ const test13: [TestStartNode, TestEndNode] = [
     duration: 200,
     errors: [],
     hasError: false,
+    meta: {},
   },
 ]
 

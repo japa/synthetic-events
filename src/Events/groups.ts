@@ -12,28 +12,33 @@ import { GroupStartNode, GroupEndNode } from '@japa/core'
 const group1: [GroupStartNode, GroupEndNode] = [
   {
     title: 'main group',
+    meta: {},
   },
   {
     title: 'main group',
     errors: [],
     hasError: false,
+    meta: {},
   },
 ]
 
 const group2: [GroupStartNode, GroupEndNode] = [
   {
     title: 'user group',
+    meta: {},
   },
   {
     title: 'user group',
     errors: [],
     hasError: false,
+    meta: {},
   },
 ]
 
 const group3: [GroupStartNode, GroupEndNode] = [
   {
     title: 'manager group',
+    meta: {},
   },
   {
     title: 'manager group',
@@ -44,12 +49,14 @@ const group3: [GroupStartNode, GroupEndNode] = [
       },
     ],
     hasError: true,
+    meta: {},
   },
 ]
 
 const group4: [GroupStartNode, GroupEndNode] = [
   {
     title: 'failing group',
+    meta: {},
   },
   {
     title: 'failing group',
@@ -64,6 +71,7 @@ const group4: [GroupStartNode, GroupEndNode] = [
       },
     ],
     hasError: true,
+    meta: {},
   },
 ]
 
