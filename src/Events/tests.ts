@@ -19,7 +19,10 @@ try {
 
 const test1: [TestStartNode, TestEndNode] = [
   {
-    title: 'create an instance of test',
+    title: {
+      original: 'create an instance of test',
+      expanded: 'create an instance of test',
+    },
     tags: [],
     timeout: 2000,
     isSkipped: false,
@@ -28,7 +31,10 @@ const test1: [TestStartNode, TestEndNode] = [
     meta: {},
   },
   {
-    title: 'create an instance of test',
+    title: {
+      original: 'create an instance of test',
+      expanded: 'create an instance of test',
+    },
     tags: [],
     timeout: 2000,
     isSkipped: false,
@@ -43,22 +49,31 @@ const test1: [TestStartNode, TestEndNode] = [
 
 const test2: [TestStartNode, TestEndNode] = [
   {
-    title: 'define timeout for the test',
+    title: {
+      original: 'define timeout for the test',
+      expanded: 'define timeout for the test',
+    },
     tags: [],
     timeout: 2000,
     isSkipped: false,
     isFailing: false,
+    retries: 4,
     isTodo: false,
     meta: {},
   },
   {
-    title: 'define timeout for the test',
+    title: {
+      original: 'define timeout for the test',
+      expanded: 'define timeout for the test',
+    },
     tags: [],
     timeout: 2000,
     isSkipped: false,
     isFailing: false,
     isTodo: false,
     duration: 18,
+    retries: 4,
+    retryAttempt: 2,
     errors: [],
     hasError: false,
     meta: {},
@@ -67,7 +82,10 @@ const test2: [TestStartNode, TestEndNode] = [
 
 const test3: [TestStartNode, TestEndNode] = [
   {
-    title: 'disable timeout for the test',
+    title: {
+      original: 'disable timeout for the test',
+      expanded: 'disable timeout for the test',
+    },
     tags: [],
     timeout: 0,
     isSkipped: false,
@@ -76,7 +94,10 @@ const test3: [TestStartNode, TestEndNode] = [
     meta: {},
   },
   {
-    title: 'disable timeout for the test',
+    title: {
+      original: 'disable timeout for the test',
+      expanded: 'disable timeout for the test',
+    },
     tags: [],
     timeout: 0,
     isSkipped: false,
@@ -91,7 +112,10 @@ const test3: [TestStartNode, TestEndNode] = [
 
 const test4: [TestStartNode, TestEndNode] = [
   {
-    title: 'ping 3rd party service',
+    title: {
+      original: 'ping 3rd party service',
+      expanded: 'ping 3rd party service',
+    },
     tags: [],
     timeout: 0,
     isSkipped: false,
@@ -101,7 +125,10 @@ const test4: [TestStartNode, TestEndNode] = [
     meta: {},
   },
   {
-    title: 'ping 3rd party service',
+    title: {
+      original: 'ping 3rd party service',
+      expanded: 'ping 3rd party service',
+    },
     tags: [],
     timeout: 0,
     isSkipped: false,
@@ -117,7 +144,10 @@ const test4: [TestStartNode, TestEndNode] = [
 
 const test5: [TestStartNode, TestEndNode] = [
   {
-    title: 'mark test to be skipped',
+    title: {
+      original: 'mark test to be skipped',
+      expanded: 'mark test to be skipped',
+    },
     tags: [],
     timeout: 0,
     isSkipped: true,
@@ -127,7 +157,10 @@ const test5: [TestStartNode, TestEndNode] = [
     meta: {},
   },
   {
-    title: 'mark test to be skipped',
+    title: {
+      original: 'mark test to be skipped',
+      expanded: 'mark test to be skipped',
+    },
     tags: [],
     timeout: 0,
     isSkipped: true,
@@ -143,7 +176,10 @@ const test5: [TestStartNode, TestEndNode] = [
 
 const test6: [TestStartNode, TestEndNode] = [
   {
-    title: 'mark test as todo',
+    title: {
+      original: 'mark test as todo',
+      expanded: 'mark test as todo',
+    },
     tags: [],
     timeout: 0,
     isSkipped: false,
@@ -152,7 +188,10 @@ const test6: [TestStartNode, TestEndNode] = [
     meta: {},
   },
   {
-    title: 'mark test as todo',
+    title: {
+      original: 'mark test as todo',
+      expanded: 'mark test as todo',
+    },
     tags: [],
     timeout: 0,
     isSkipped: false,
@@ -167,7 +206,10 @@ const test6: [TestStartNode, TestEndNode] = [
 
 const test7: [TestStartNode, TestEndNode] = [
   {
-    title: 'define tags',
+    title: {
+      original: 'define tags',
+      expanded: 'define tags',
+    },
     tags: ['@slow', '@regression'],
     timeout: 0,
     isSkipped: false,
@@ -176,7 +218,10 @@ const test7: [TestStartNode, TestEndNode] = [
     meta: {},
   },
   {
-    title: 'define tags',
+    title: {
+      original: 'define tags',
+      expanded: 'define tags',
+    },
     tags: ['@slow', '@regression'],
     timeout: 0,
     isSkipped: false,
@@ -191,7 +236,10 @@ const test7: [TestStartNode, TestEndNode] = [
 
 const test8: [TestStartNode, TestEndNode] = [
   {
-    title: 'define dataset for the test "{{ dataset.row.name }}"',
+    title: {
+      original: 'define dataset for the test "{name}"',
+      expanded: 'define dataset for the test "virk"',
+    },
     tags: [],
     dataset: {
       size: 3,
@@ -205,7 +253,10 @@ const test8: [TestStartNode, TestEndNode] = [
     meta: {},
   },
   {
-    title: 'define dataset for the test "{{ dataset.row.name }}"',
+    title: {
+      original: 'define dataset for the test "{name}"',
+      expanded: 'define dataset for the test "virk"',
+    },
     tags: [],
     dataset: {
       size: 3,
@@ -225,7 +276,10 @@ const test8: [TestStartNode, TestEndNode] = [
 
 const test9: [TestStartNode, TestEndNode] = [
   {
-    title: 'define dataset for the test "{{ dataset.row.name }}"',
+    title: {
+      original: 'define dataset for the test "{name}"',
+      expanded: 'define dataset for the test "nikk"',
+    },
     tags: [],
     dataset: {
       size: 3,
@@ -239,7 +293,10 @@ const test9: [TestStartNode, TestEndNode] = [
     meta: {},
   },
   {
-    title: 'define dataset for the test "{{ dataset.row.name }}"',
+    title: {
+      original: 'define dataset for the test "{name}"',
+      expanded: 'define dataset for the test "nikk"',
+    },
     tags: [],
     dataset: {
       size: 3,
@@ -259,7 +316,10 @@ const test9: [TestStartNode, TestEndNode] = [
 
 const test10: [TestStartNode, TestEndNode] = [
   {
-    title: 'define dataset for the test "{{ dataset.row.name }}"',
+    title: {
+      original: 'define dataset for the test "{name}"',
+      expanded: 'define dataset for the test "romain"',
+    },
     tags: [],
     dataset: {
       size: 3,
@@ -273,7 +333,10 @@ const test10: [TestStartNode, TestEndNode] = [
     meta: {},
   },
   {
-    title: 'define dataset for the test "{{ dataset.row.name }}"',
+    title: {
+      original: 'define dataset for the test "{name}"',
+      expanded: 'define dataset for the test "romain"',
+    },
     tags: [],
     dataset: {
       size: 3,
@@ -293,7 +356,10 @@ const test10: [TestStartNode, TestEndNode] = [
 
 const test11: [TestStartNode, TestEndNode] = [
   {
-    title: 'multiple calls to exec should result in a noop',
+    title: {
+      original: 'multiple calls to exec should result in a noop',
+      expanded: 'multiple calls to exec should result in a noop',
+    },
     tags: [],
     timeout: 0,
     isSkipped: false,
@@ -302,7 +368,10 @@ const test11: [TestStartNode, TestEndNode] = [
     meta: {},
   },
   {
-    title: 'multiple calls to exec should result in a noop',
+    title: {
+      original: 'multiple calls to exec should result in a noop',
+      expanded: 'multiple calls to exec should result in a noop',
+    },
     tags: [],
     timeout: 0,
     isSkipped: false,
@@ -322,7 +391,10 @@ const test11: [TestStartNode, TestEndNode] = [
 
 const test12: [TestStartNode, TestEndNode] = [
   {
-    title: 'fail test when executor raises an exception',
+    title: {
+      original: 'fail test when executor raises an exception',
+      expanded: 'fail test when executor raises an exception',
+    },
     tags: [],
     timeout: 0,
     isSkipped: false,
@@ -331,7 +403,10 @@ const test12: [TestStartNode, TestEndNode] = [
     meta: {},
   },
   {
-    title: 'fail test when executor raises an exception',
+    title: {
+      original: 'fail test when executor raises an exception',
+      expanded: 'fail test when executor raises an exception',
+    },
     tags: [],
     timeout: 0,
     isSkipped: false,
@@ -359,7 +434,10 @@ const test12: [TestStartNode, TestEndNode] = [
 
 const test13: [TestStartNode, TestEndNode] = [
   {
-    title: 'regression test passing',
+    title: {
+      original: 'regression test passing',
+      expanded: 'regression test passing',
+    },
     tags: [],
     timeout: 0,
     isSkipped: false,
@@ -369,7 +447,10 @@ const test13: [TestStartNode, TestEndNode] = [
     meta: {},
   },
   {
-    title: 'regression test passing',
+    title: {
+      original: 'regression test passing',
+      expanded: 'regression test passing',
+    },
     tags: [],
     timeout: 0,
     isSkipped: false,

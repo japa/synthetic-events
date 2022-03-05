@@ -14,7 +14,8 @@ const emitter = new Emitter()
 emitter.on('suite:start', (suite) => console.log(suite.name))
 emitter.on('group:start', (group) => console.log(`  ${group.title}`))
 emitter.on('test:end', (test) => {
-  console.log(`    > ${test.title} (${test.duration})`)
+  const retries = test.retries ? ` (${test.retryAttempt}/${test.retries})` : ''
+  console.log(`    > ${test.title.expanded} (${test.duration})${retries}`)
 })
 
 fire(emitter)
