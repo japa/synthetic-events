@@ -1,6 +1,6 @@
 {
   "name": "@japa/synthetic-events",
-  "version": "1.0.10",
+  "version": "2.0.0",
   "description": "Generate dummy/synthetic events to test a reporter",
   "main": "build/index.js",
   "files": [
