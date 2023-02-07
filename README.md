@@ -45,7 +45,7 @@ export function yourReporter() {
 }
 ```
 
-[github-actions-image]: https://img.shields.io/github/workflow/status/japa/synthetic-events/test?style=for-the-badge
+[github-actions-image]: https://img.shields.io/github/actions/workflow/status/japa/synthetic-events/test.yml?style=for-the-badge
 
 [github-actions-url]: https://github.com/japa/synthetic-events/actions/workflows/test.yml "github-actions"
 
