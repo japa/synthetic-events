@@ -8,7 +8,7 @@
  */
 
 import { Emitter } from '@japa/core'
-import { fire } from '../index'
+import { fire } from '../index.js'
 const emitter = new Emitter()
 
 emitter.on('suite:start', (suite) => console.log(suite.name))

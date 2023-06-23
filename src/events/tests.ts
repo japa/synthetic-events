@@ -8,7 +8,7 @@
  */
 
 import { Assert } from '@japa/assert'
-import { TestEndNode, TestStartNode } from '@japa/core'
+import type { TestEndNode, TestStartNode } from '@japa/core/types'
 
 let assertionError
 try {

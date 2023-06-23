@@ -1,119 +1,69 @@
 {
   "name": "@japa/synthetic-events",
-  "version": "2.0.2",
   "description": "Generate dummy/synthetic events to test a reporter",
-  "main": "build/index.js",
+  "version": "2.0.2",
+  "engines": {
+    "node": ">=18.16.0"
+  },
+  "main": "./build/index.js",
+  "type": "module",
   "files": [
+    "index.ts",
+    "src",
     "build/src",
     "build/index.d.ts",
-    "build/index.js"
+    "build/index.js",
+    "build/index.d.ts.map"
   ],
   "exports": {
     ".": "./build/index.js"
   },
   "scripts": {
-    "mrm": "mrm --preset=@adonisjs/mrm-preset",
-    "pretest": "npm run lint",
-    "test": "node .bin/test.js",
-    "clean": "del build",
+    "pretest": "npm run lint && npm run typecheck",
+    "test": "c8 npm run quick:test",
+    "clean": "del-cli build",
     "compile": "npm run lint && npm run clean && tsc",
     "build": "npm run compile",
-    "prepublishOnly": "npm run build",
-    "lint": "eslint . --ext=.ts",
-    "format": "prettier --write .",
-    "commit": "git-cz",
     "release": "np --message=\"chore(release): %s\"",
     "version": "npm run build",
-    "sync-labels": "github-label-sync --labels ./node_modules/@adonisjs/mrm-preset/gh-labels.json japa/synthetic-events"
+    "prepublishOnly": "npm run build",
+    "lint": "eslint . --ext=.ts",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "quick:test": "node --loader ts-node/esm bin/test.ts",
+    "sync-labels": "github-label-sync --labels .github/labels.json japa/synthetic-events"
   },
-  "keywords": [
-    "japa",
-    "events",
-    "reporter",
-    "test-reporter"
-  ],
-  "author": "virk,japa",
-  "license": "MIT",
   "devDependencies": {
+    "@adonisjs/eslint-config": "^1.1.5",
     "@adonisjs/mrm-preset": "^5.0.3",
-    "@adonisjs/require-ts": "^2.0.13",
-    "@japa/core": "^7.3.1",
+    "@adonisjs/prettier-config": "^1.1.5",
+    "@adonisjs/tsconfig": "^1.1.5",
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
+    "@japa/core": "^8.0.0-1",
+    "@japa/run-failed-tests": "^1.1.1",
+    "@japa/spec-reporter": "^1.3.3",
+    "@swc/core": "^1.3.66",
     "@types/node": "^18.11.19",
-    "commitizen": "^4.3.0",
-    "cz-conventional-changelog": "^3.3.0",
+    "c8": "^8.0.0",
     "del-cli": "^5.0.0",
     "eslint": "^8.33.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-adonis": "^2.1.1",
-    "eslint-plugin-prettier": "^4.2.1",
     "github-label-sync": "^2.2.0",
     "husky": "^8.0.3",
-    "japa": "^4.0.0",
-    "mrm": "^4.1.13",
     "np": "^7.6.3",
     "prettier": "^2.8.3",
+    "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
   },
-  "mrmConfig": {
-    "core": false,
-    "license": "MIT",
-    "services": [
-      "github-actions"
-    ],
-    "minNodeVersion": "16.13.1",
-    "probotApps": [
-      "stale",
-      "lock"
-    ],
-    "runGhActionsOnWindows": false
+  "dependencies": {
+    "@japa/assert": "^1.4.1"
   },
-  "eslintConfig": {
-    "extends": [
-      "plugin:adonis/typescriptPackage",
-      "prettier"
-    ],
-    "plugins": [
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "endOfLine": "auto"
-        }
-      ]
-    }
+  "peerDependencies": {
+    "@japa/core": "^8.0.0-1"
   },
-  "eslintIgnore": [
-    "build"
-  ],
-  "prettier": {
-    "trailingComma": "es5",
-    "semi": false,
-    "singleQuote": true,
-    "useTabs": false,
-    "quoteProps": "consistent",
-    "bracketSpacing": true,
-    "arrowParens": "always",
-    "printWidth": 100
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
-  "np": {
-    "contents": ".",
-    "anyBranch": false
-  },
-  "publishConfig": {
-    "access": "public",
-    "tag": "latest"
-  },
-  "types": "./build/index.d.ts",
-  "directories": {
-    "example": "examples"
-  },
+  "author": "virk,japa",
+  "license": "MIT",
+  "homepage": "https://github.com/japa/synthetic-events#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/japa/synthetic-events.git"
@@ -121,11 +71,41 @@
   "bugs": {
     "url": "https://github.com/japa/synthetic-events/issues"
   },
-  "homepage": "https://github.com/japa/synthetic-events#readme",
-  "dependencies": {
-    "@japa/assert": "^1.3.6"
+  "keywords": [
+    "japa",
+    "events",
+    "reporter",
+    "test-reporter"
+  ],
+  "eslintConfig": {
+    "extends": "@adonisjs/eslint-config/package"
   },
-  "peerDependencies": {
-    "@japa/core": "^7.0.0"
+  "prettier": "@adonisjs/prettier-config",
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "next"
+  },
+  "np": {
+    "message": "chore(release): %s",
+    "tag": "next",
+    "branch": "main",
+    "anyBranch": false
+  },
+  "c8": {
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
+  },
+  "directories": {
+    "test": "tests"
   }
 }

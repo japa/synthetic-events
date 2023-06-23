@@ -9,9 +9,9 @@
 
 import { Emitter } from '@japa/core'
 
-import testEvents from './src/events/tests'
-import groupEvents from './src/events/groups'
-import suitesEvents from './src/events/suites'
+import testEvents from './src/events/tests.js'
+import groupEvents from './src/events/groups.js'
+import suitesEvents from './src/events/suites.js'
 
 export async function fire(emitter: Emitter) {
   emitter.emit('runner:start', {})

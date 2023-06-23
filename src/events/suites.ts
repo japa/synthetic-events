@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-import { SuiteStartNode, SuiteEndNode } from '@japa/core'
+import type { SuiteStartNode, SuiteEndNode } from '@japa/core/types'
 
 const suite1: [SuiteStartNode, SuiteEndNode] = [
   {

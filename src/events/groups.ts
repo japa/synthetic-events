@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-import { GroupStartNode, GroupEndNode } from '@japa/core'
+import type { GroupStartNode, GroupEndNode } from '@japa/core/types'
 
 const group1: [GroupStartNode, GroupEndNode] = [
   {
