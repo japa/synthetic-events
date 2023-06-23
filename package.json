@@ -35,7 +35,6 @@
   },
   "devDependencies": {
     "@adonisjs/eslint-config": "^1.1.5",
-    "@adonisjs/mrm-preset": "^5.0.3",
     "@adonisjs/prettier-config": "^1.1.5",
     "@adonisjs/tsconfig": "^1.1.5",
     "@commitlint/cli": "^17.6.5",
